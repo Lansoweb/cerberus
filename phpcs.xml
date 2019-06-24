@@ -3,7 +3,7 @@
     <description>Expressive Skeleton coding standard</description>
 
     <!-- Include full Doctrine Coding Standard -->
-    <rule ref="Doctrine">
+    <rule ref="./vendor/doctrine/coding-standard/lib/Doctrine/ruleset.xml">
         <exclude name="SlevomatCodingStandard.Classes.SuperfluousInterfaceNaming.SuperfluousSuffix"/>
     </rule>
 
