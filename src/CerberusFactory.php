@@ -1,4 +1,9 @@
 <?php
+/**
+ * @see       https://github.com/lansoweb/cerberus for the canonical source repository
+ * @copyright Copyright (c) 2019 Leandro Silva
+ * @license   https://github.com/lansoweb/cerberus/blob/master/LICENSE.md New BSD License
+ */
 
 declare(strict_types=1);
 
@@ -11,9 +16,9 @@ class CerberusFactory
 {
     public function __invoke(ContainerInterface $container) : CerberusInterface
     {
-        $config = $container->get('config');
+        $config      = $container->get('config');
         $maxFailures = (int) ($config['cerberus']['max_failures'] ?? 5);
-        $timeout = (int) ($config['cerberus']['timeout'] ?? 60);
+        $timeout     = (int) ($config['cerberus']['timeout'] ?? 60);
 
         return new Cerberus($container->get(CacheInterface::class), $maxFailures, $timeout);
     }

@@ -1,4 +1,9 @@
 <?php
+/**
+ * @see       https://github.com/lansoweb/cerberus for the canonical source repository
+ * @copyright Copyright (c) 2019 Leandro Silva
+ * @license   https://github.com/lansoweb/cerberus/blob/master/LICENSE.md New BSD License
+ */
 
 declare(strict_types=1);
 
@@ -6,9 +11,9 @@ namespace Los\Cerberus;
 
 interface CerberusInterface
 {
-    const CLOSED = 0;
-    const OPEN = 1;
-    const HALF_OPEN = 2;
+    public const CLOSED    = 0;
+    public const OPEN      = 1;
+    public const HALF_OPEN = 2;
 
     /**
      * Is the circuit available to connections.

@@ -1,13 +1,17 @@
 <?php
 
+declare(strict_types=1);
+
 namespace LosTest\Cerberus;
 
-use PHPUnit\Framework\TestCase;
 use Los\Cerberus\Cerberus;
-use Los\Cerberus\CerberusInterface;
 use Los\Cerberus\CerberusFactory;
+use Los\Cerberus\CerberusInterface;
+use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
 use Psr\SimpleCache\CacheInterface;
+
+use function sleep;
 
 class CerberusTest extends TestCase
 {
@@ -16,7 +20,7 @@ class CerberusTest extends TestCase
     /** @var array */
     private $cache = [];
 
-    protected function setUp(): void
+    protected function setUp() : void
     {
         $storage = $this->createMock(CacheInterface::class);
         $storage->method('get')->will($this->returnCallback([$this, 'getCache']));

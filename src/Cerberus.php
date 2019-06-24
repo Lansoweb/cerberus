@@ -1,23 +1,18 @@
 <?php
+/**
+ * @see       https://github.com/lansoweb/cerberus for the canonical source repository
+ * @copyright Copyright (c) 2019 Leandro Silva
+ * @license   https://github.com/lansoweb/cerberus/blob/master/LICENSE.md New BSD License
+ */
 
 declare(strict_types=1);
 
-/**
- * The Cerberus class.
- *
- * @author  Leandro Silva <leandro@leandrosilva.info>
- * @license https://github.com/mt-olympus/cerberus/blob/master/LICENSE MIT Licence
- */
 namespace Los\Cerberus;
 
 use Psr\SimpleCache\CacheInterface;
 
-/**
- * The Cerberus Class.
- *
- * @author  Leandro Silva <leandro@leandrosilva.info>
- * @license https://github.com/mt-olympus/cerberus/blob/master/LICENSE MIT Licence
- */
+use function time;
+
 class Cerberus implements CerberusInterface
 {
     /**
@@ -44,16 +39,16 @@ class Cerberus implements CerberusInterface
     public function __construct(CacheInterface $storage, int $maxFailures = 5, int $timeout = 30)
     {
         $this->maxFailures = $maxFailures;
-        $this->timeout = $timeout;
-        $this->storage = $storage;
+        $this->timeout     = $timeout;
+        $this->storage     = $storage;
     }
 
-    public function isAvailable(string $serviceName = ''): bool
+    public function isAvailable(string $serviceName = '') : bool
     {
         return $this->getStatus($serviceName) !== CerberusInterface::OPEN;
     }
 
-    public function getStatus(string $serviceName = ''): int
+    public function getStatus(string $serviceName = '') : int
     {
         $failures = (int) $this->storage->get($serviceName . 'failures', 0);
 
@@ -84,14 +79,14 @@ class Cerberus implements CerberusInterface
         return CerberusInterface::OPEN;
     }
 
-    public function reportSuccess(string $serviceName = ''): void
+    public function reportSuccess(string $serviceName = '') : void
     {
         $this->storage->set($serviceName . 'failures', 0);
     }
 
-    public function reportFailure(string $serviceName = ''): void
+    public function reportFailure(string $serviceName = '') : void
     {
-        $failures = $this->storage->get($serviceName . 'failures', 0);
+        $failures  = $this->storage->get($serviceName . 'failures', 0);
         $failures += 1;
         $this->storage->set($serviceName . 'failures', $failures);
     }

@@ -9,29 +9,10 @@ cache:
 env:
   global:
     - COMPOSER_ARGS="--no-interaction --no-plugins"
-    - COVERAGE_DEPS="satooshi/php-coveralls"
+    - COVERAGE_DEPS="php-coveralls/php-coveralls"
 
 matrix:
   include:
-    - php: 7
-      env:
-        - DEPS=lowest
-    - php: 7
-      env:
-        - DEPS=locked
-        - LEGACY_DEPS="ocramius/proxy-manager phpbench/phpbench phpunit/phpunit"
-    - php: 7
-      env:
-        - DEPS=latest
-    - php: 7.1
-      env:
-        - DEPS=lowest
-    - php: 7.1
-      env:
-        - DEPS=locked
-    - php: 7.1
-      env:
-        - DEPS=latest
     - php: 7.2
       env:
         - DEPS=lowest
@@ -41,6 +22,15 @@ matrix:
         - CS_CHECK=true
         - TEST_COVERAGE=true
     - php: 7.2
+      env:
+        - DEPS=latest
+    - php: 7.3
+      env:
+        - DEPS=lowest
+    - php: 7.3
+      env:
+        - DEPS=locked
+    - php: 7.3
       env:
         - DEPS=latest
 
