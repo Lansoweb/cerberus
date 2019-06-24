@@ -1,0 +1,7 @@
+<?php
+return [
+    'cerberus' => [
+        'max_failures' => 5,
+        'timeout' => 60,
+    ],
+];
