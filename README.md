@@ -1,6 +1,6 @@
 # Cerberus
 
-[![Build Status](https://travis-ci.org/lansoweb/cerberus.svg?branch=master)](https://travis-ci.org/lansoweb/cerberus) [![Coverage Status](https://coveralls.io/repos/Lansoweb/cerberus/badge.svg?branch=master&service=github)](https://coveralls.io/github/Lansoweb/cerberus?branch=master) [![Latest Stable Version](https://poser.pugx.org/lansoweb/cerberus/v/stable.svg)](https://packagist.org/packages/lansoweb/cerberus) [![Total Downloads](https://poser.pugx.org/lansoweb/cerberus/downloads.svg)](https://packagist.org/packages/lansoweb/cerberus) 
+[![Build Status](https://travis-ci.org/lansoweb/cerberus.svg?branch=master)](https://travis-ci.org/lansoweb/cerberus) [![Coverage Status](https://coveralls.io/repos/Lansoweb/cerberus/badge.svg?branch=master&service=github)](https://coveralls.io/github/Lansoweb/cerberus?branch=master) [![Latest Stable Version](https://poser.pugx.org/los/cerberus/v/stable.svg)](https://packagist.org/packages/los/cerberus) [![Total Downloads](https://poser.pugx.org/los/cerberus/downloads.svg)](https://packagist.org/packages/los/cerberus) 
 
 ## Introduction
 
