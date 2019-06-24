@@ -1,9 +1,10 @@
 <?php
-/**
- * @see       https://github.com/lansoweb/cerberus for the canonical source repository
- */
 
 declare(strict_types=1);
+
+/**
+ * @see https://github.com/lansoweb/cerberus for the canonical source repository
+ */
 
 namespace Los\Cerberus;
 
@@ -21,8 +22,7 @@ interface CerberusInterface
     /**
      * Returns the current status of the circuit.
      *
-     * @param string|null $serviceName The service name
-     *
+     * @param string $serviceName The service name
      * @return int CLOSED (0), OPEN (1) or HALF_OPEN (2)
      */
     public function getStatus(string $serviceName = '') : int;
@@ -30,14 +30,14 @@ interface CerberusInterface
     /**
      * Signals that the connection was failed, incrementing the failure count.
      *
-     * @param string|null $serviceName The service name
+     * @param string $serviceName The service name
      */
     public function reportFailure(string $serviceName = '') : void;
 
     /**
      * Signals that the connection was a success, reseting the failure count.
      *
-     * @param string|null $serviceName The service name
+     * @param string $serviceName The service name
      */
     public function reportSuccess(string $serviceName = '') : void;
 }

@@ -17,6 +17,7 @@ class CerberusTest extends TestCase
 {
     /** @var Cerberus */
     private $cerberus;
+
     /** @var array */
     private $cache = [];
 
@@ -29,12 +30,19 @@ class CerberusTest extends TestCase
         $this->cerberus = new Cerberus($storage, 2, 2);
     }
 
-    public function getCache($key, $default = null)
+    /**
+     * @param null|mixed $default
+     * @return null|mixed
+     */
+    public function getCache(string $key, $default = null)
     {
         return $this->cache[$key] ?? $default;
     }
 
-    public function setCache($key, $value)
+    /**
+     * @param mixed $value
+     */
+    public function setCache(string $key, $value) : void
     {
         $this->cache[$key] = $value;
     }

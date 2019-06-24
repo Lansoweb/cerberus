@@ -1,9 +1,10 @@
 <?php
-/**
- * @see       https://github.com/lansoweb/cerberus for the canonical source repository
- */
 
 declare(strict_types=1);
+
+/**
+ * @see https://github.com/lansoweb/cerberus for the canonical source repository
+ */
 
 namespace Los\Cerberus;
 
