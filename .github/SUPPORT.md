@@ -3,7 +3,7 @@
 This project offers the following support channels:
 
 - To report issues, use this repository's
-  [issue tracker](https://github.com/phly/keep-a-changelog/issues/new)
+  [issue tracker](https://github.com/lansoweb/cerberus/issues/new)
 
 Feel free to ask questions via the issue tracker; however, please include the
 veribiage `[QUESTION]` in the issue title to ensure we resolve it as such.

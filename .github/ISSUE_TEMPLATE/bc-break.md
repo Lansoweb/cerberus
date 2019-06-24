@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 <!--
-Before reporting a BC break, please consult the changelog to make sure it's not an expected change: https://github.com/phly/keep-a-changelog/blob/master/CHANGELOG.md
+Before reporting a BC break, please consult the changelog to make sure it's not an expected change: https://github.com/lansoweb/cerberus/blob/master/CHANGELOG.md
 -->
 
 ### BC Break Report
