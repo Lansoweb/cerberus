@@ -1,8 +1,6 @@
 <?php
 /**
  * @see       https://github.com/lansoweb/cerberus for the canonical source repository
- * @copyright Copyright (c) 2019 Leandro Silva
- * @license   https://github.com/lansoweb/cerberus/blob/master/LICENSE.md New BSD License
  */
 
 declare(strict_types=1);
@@ -10,7 +8,6 @@ declare(strict_types=1);
 namespace Los\Cerberus;
 
 use Psr\SimpleCache\CacheInterface;
-
 use function time;
 
 class Cerberus implements CerberusInterface

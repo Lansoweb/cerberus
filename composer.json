@@ -15,11 +15,10 @@
     },
     "require-dev" : {
         "captainhook/plugin-composer": "^4.0",
+        "doctrine/coding-standard": "^6.0",
         "php-coveralls/php-coveralls": "^2.1",
         "phpunit/phpunit": "^8.1",
-        "squizlabs/php_codesniffer": "^3.4",
-        "webimpress/coding-standard": "dev-master@dev",
-        "zendframework/zend-coding-standard": "2.0.0-alpha.3@alpha || ^2.0"
+        "squizlabs/php_codesniffer": "^3.4"
     },
     "replace": {
         "mt-olympus/cerberus": "*"
@@ -42,7 +41,7 @@
             "@cs-check",
             "@test"
         ],
-        "cs-check": "phpcs -p",
+        "cs-check": "phpcs -p -s",
         "cs-fix": "phpcbf -p",
         "test": "phpunit --colors=always",
         "test-coverage": "phpunit --colors=always --coverage-clover clover.xml",

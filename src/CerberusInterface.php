@@ -1,8 +1,6 @@
 <?php
 /**
  * @see       https://github.com/lansoweb/cerberus for the canonical source repository
- * @copyright Copyright (c) 2019 Leandro Silva
- * @license   https://github.com/lansoweb/cerberus/blob/master/LICENSE.md New BSD License
  */
 
 declare(strict_types=1);
@@ -17,10 +15,6 @@ interface CerberusInterface
 
     /**
      * Is the circuit available to connections.
-     *
-     * @param string|null $serviceName
-     *
-     * @return bool
      */
     public function isAvailable(string $serviceName = '') : bool;
 
